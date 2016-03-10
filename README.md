@@ -8,6 +8,7 @@ Technical documentation for complex systems.
 - [Use External References in Pages](#use-external-references-in-pages)
 - [Syntax Highlight Support: Other Languages](#syntax-highlight-support-other-languages)
 - [Set l18n Language](#set-l18n-language)
+- [Screenshots](#screenshots)
 
 ## How to Use
 
@@ -141,3 +142,13 @@ tech_docs_l18n['pt-br'] = {
   action_number: '{number} - '
 }
 ```
+
+## Screenshots
+
+#### Index Page
+
+![Index Page](/screenshots/index-demo.png)
+
+#### Show Page
+
+![Show Page](/screenshots/show-demo.png)
