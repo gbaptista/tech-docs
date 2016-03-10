@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechDocs</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/codemirror/codemirror.css" rel="stylesheet">
+    <link href="css/codemirror/theme/solarized.css" rel="stylesheet">
+    <link href="css/tech-docs/tech-docs.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container-fluid" id="container"></div>
+
+    <script id="page-header-partial" type="text/x-handlebars-template">
+      <div class="page-header">
+        <h1>{{category}}: <small>{{title}}</small></h1>
+        <a href="index.html">{{back_to_index}}</a>
+      </div>
+    </script>
+
+    <script id="stage-header-partial" type="text/x-handlebars-template">
+      <div class="page-header">
+        <h1>{{#if has_more_than_one}}{{number}}{{/if}}<small>{{#if has_more_than_one}} | {{/if}}{{{title}}}</small></h1>
+      </div>
+    </script>
+
+    <script id="action-panel-partial" type="text/x-handlebars-template">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">{{#if has_more_than_one}}{{number}}{{/if}}{{{title}}}
+          </div>
+          <div class="panel-body">
+            {{#if description}}
+              <p>{{{description}}}</p>
+            {{/if}}
+
+            {{#if code}}
+              <code class="highlight" language="{{language}}">
+                {{code}}
+              </code>
+              {{#if has_tables}}<br />{{/if}}
+            {{/if}}
+
+            {{#each tables}}
+              <table class="table table-bordered table-hover">{{{this}}}</table>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <div id="temporary-html-render" class="hidden"></div>
+
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/codemirror/codemirror.js"></script>
+
+    <script src="js/codemirror/mode/php.js"></script>
+    <script src="js/codemirror/mode/python.js"></script>
+    <script src="js/codemirror/mode/ruby.js"></script>
+    <script src="js/codemirror/mode/sql.js"></script>
+    <script src="js/codemirror/mode/vbscript.js"></script>
+
+    <script src="config/locales.js"></script>
+    <script src="config/external_references.js"></script>
+    <script src="js/tech-docs/render.js"></script>
+  </body>
+</html>
