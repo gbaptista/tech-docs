@@ -2,6 +2,13 @@
 
 Technical documentation for complex systems.
 
+- [How to Use](#how-to-use)
+- [New Pages](#new-pages)
+- [Pages Syntax](#pages-syntax)
+- [Use External References in Pages](#use-external-references-in-pages)
+- [Syntax Highlight Support: Other Languages](#syntax-highlight-support-other-languages)
+- [Set l18n Language](#set-l18n-language)
+
 ## Syntax Highlight Support: Other Languages
 - Choose your language at [CodeMirror repository](https://github.com/codemirror/CodeMirror/tree/master/mode).
 - Download the `.js` file to [js/codemirror/mode](js/codemirror/mode).
@@ -68,7 +75,7 @@ Edit the `index.html` file:
 </div>
 ```
 
-## Set Language
+## Set l18n Language
 Use the `config/locales.js` file:
 ```javascript
 # Current language.
@@ -133,4 +140,4 @@ Basic structure:
   </action>
 </stage>
 ```
-for more details see the examples: [pages/examples](pages/examples)
+For more details see the examples: [pages/examples](pages/examples)
