@@ -124,7 +124,7 @@ Search for <a href="https://www.google.com.br/?gws_rd=ssl#q=ruby language" targe
 ## Set l18n Language
 Use the `config/locales.js` file:
 ```javascript
-# Current language.
+// Current language.
 var tech_docs_language = 'pt-br';
 
 var tech_docs_l18n = {};
