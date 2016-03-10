@@ -9,18 +9,6 @@ Technical documentation for complex systems.
 - [Syntax Highlight Support: Other Languages](#syntax-highlight-support-other-languages)
 - [Set l18n Language](#set-l18n-language)
 
-## Syntax Highlight Support: Other Languages
-- Choose your language at [CodeMirror repository](https://github.com/codemirror/CodeMirror/tree/master/mode).
-- Download the `.js` file to [js/codemirror/mode](js/codemirror/mode).
-- Edit the [show.html](show.html) file:
-```html
-<script src="js/codemirror/codemirror.js"></script>
-
-<script src="js/codemirror/mode/yourlanguage.js"></script>
-
-<script src="config/locales.js"></script>
-```
-
 ## How to Use
 
 Clone the project:
@@ -75,26 +63,26 @@ Edit the `index.html` file:
 </div>
 ```
 
-## Set l18n Language
-Use the `config/locales.js` file:
-```javascript
-# Current language.
-var tech_docs_language = 'pt-br';
+## Pages Syntax
+Basic structure:
+```html
+<title>Your Page</title>
 
-var tech_docs_l18n = {};
+<category>Your Category</category>
 
-tech_docs_l18n['en'] = {
-  back_to_index: 'back to index',
-  stage_number: 'Stage {number}',
-  action_number: '{number} - '
-}
+<stage>
+  <title>Explanation about Something</title>
 
-tech_docs_l18n['pt-br'] = {
-  back_to_index: 'voltar ao índice',
-  stage_number:  '{number}ª Etapa',
-  action_number: '{number} - '
-}
+  <action>
+    <title>Something is a thing.</title>
+
+    <description>
+      I don't know what thing means.
+    </description>
+  </action>
+</stage>
 ```
+For more details see the examples: [pages/examples](pages/examples)
 
 ## Use External References in Pages
 Use the `config/external_references.js` file:
@@ -121,23 +109,35 @@ See the <a href="https://github.com/search?q=tech-docs" target="_blank">tech-doc
 Search for <a href="https://www.google.com.br/?gws_rd=ssl#q=ruby language" target="_blank">ruby language</a>. ;)
 ```
 
-## Pages Syntax
-Basic structure:
+## Syntax Highlight Support: Other Languages
+- Choose your language at [CodeMirror repository](https://github.com/codemirror/CodeMirror/tree/master/mode).
+- Download the `.js` file to [js/codemirror/mode](js/codemirror/mode).
+- Edit the [show.html](show.html) file:
 ```html
-<title>Your Page</title>
+<script src="js/codemirror/codemirror.js"></script>
 
-<category>Your Category</category>
+<script src="js/codemirror/mode/yourlanguage.js"></script>
 
-<stage>
-  <title>Explanation about Something</title>
-
-  <action>
-    <title>Something is a thing.</title>
-
-    <description>
-      I don't know what thing means.
-    </description>
-  </action>
-</stage>
+<script src="config/locales.js"></script>
 ```
-For more details see the examples: [pages/examples](pages/examples)
+
+## Set l18n Language
+Use the `config/locales.js` file:
+```javascript
+# Current language.
+var tech_docs_language = 'pt-br';
+
+var tech_docs_l18n = {};
+
+tech_docs_l18n['en'] = {
+  back_to_index: 'back to index',
+  stage_number: 'Stage {number}',
+  action_number: '{number} - '
+}
+
+tech_docs_l18n['pt-br'] = {
+  back_to_index: 'voltar ao índice',
+  stage_number:  '{number}ª Etapa',
+  action_number: '{number} - '
+}
+```
