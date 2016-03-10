@@ -48,7 +48,9 @@
             {{/if}}
 
             {{#each tables}}
-              <table class="table table-bordered table-hover">{{{this}}}</table>
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">{{{this}}}</table>
+              </div>
             {{/each}}
           </div>
         </div>
