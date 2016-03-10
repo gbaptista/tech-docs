@@ -1,3 +1,4 @@
+# Current language.
 var tech_docs_language = 'pt-br';
 
 var tech_docs_l18n = {};
