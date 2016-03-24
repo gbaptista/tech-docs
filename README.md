@@ -15,7 +15,7 @@ Technical documentation for complex systems.
 Clone the project:
 ```
 git clone https://github.com/gbaptista/tech-docs.git
-de tech-docs
+cd tech-docs
 
 # Just open the index.html file. =)
 ```
